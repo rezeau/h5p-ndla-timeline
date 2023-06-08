@@ -802,6 +802,16 @@
           }
         ],
         "default": "human"
+      },
+      {
+        "label": "Initial Zoom",
+        "name": "initialZoom",
+        "type": "number",
+        "min": -8,
+        "max": 8,
+        "default": 0,
+        "description": "This will tweak the initial zoom level. Equivalent to pressing the zoom in or zoom out button the specified number of times. Negative numbers zoom out.",
+        "optional": false
       }
     ]
   },
