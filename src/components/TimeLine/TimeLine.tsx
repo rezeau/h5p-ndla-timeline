@@ -44,8 +44,8 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     throw new Error("Unexpected error: Missing name");
   }
   // See https://stackoverflow.com/questions/54496398/typescript-type-string-undefined-is-not-assignable-to-type-string
-  let zoom: string = data.behaviour.initialZoom as string;
-
+  let zoom = (!data.behaviour.initialZoom ? "2" : data.behaviour.initialZoom as string);
+  zoom = zoom.toString();
   const [height, setHeight] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
   const [slideHeight, setSlideHeight] = useState(0);
@@ -102,7 +102,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     const timeline = new Timeline(containerId, timelineDefinition, {
       language: getClosestLocaleCode(containerRef.current),
       //language: 'fr',
-      //initial_zoom: zoom,
+      initial_zoom: zoom,
     });
 
     const timelineContainer = containerRef.current?.querySelector(
