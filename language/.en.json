@@ -321,6 +321,10 @@
               "label": "Indexed"
             }
           ]
+        },
+        {
+          "label": "Initial Zoom",
+          "description": "This will tweak the initial zoom level (2). Equivalent to pressing the zoom in or zoom out button the specified number of times. Values 0 and 1 will zoom out; values 3 to 10 will zoom in."
         }
       ]
     },

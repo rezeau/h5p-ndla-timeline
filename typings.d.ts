@@ -83,6 +83,7 @@ declare module '@knight-lab/timelinejs' {
         events: Array<TimelineSlide>;
         eras: Array<TimelineEra>;
         scale?: 'human' | 'cosmological' = 'human';
+        initial_zoom?: string | undefined;
       };
 
   // Definitions by: Roland Zwaga <https://github.com/rolandzwaga>
@@ -109,7 +110,7 @@ declare module '@knight-lab/timelinejs' {
     /*
      * Optional tweak the default zoom level
      */
-    start_zoom_adjust?: string | undefined;
+    initial_zoom?: string | undefined;
     /*
      * Optional location bar hashes
      */
