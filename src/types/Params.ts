@@ -8,4 +8,5 @@ export type Params = TimelineData & {
   };
 
   l10n?: Translations;
+  language?: string;
 };
