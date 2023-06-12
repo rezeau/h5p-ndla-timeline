@@ -101,6 +101,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     // eslint-disable-next-line no-new
     const timeline = new Timeline(containerId, timelineDefinition, {
       language: language,
+      initial_zoom: zoom,
     });
 
     const timelineContainer = containerRef.current?.querySelector(
