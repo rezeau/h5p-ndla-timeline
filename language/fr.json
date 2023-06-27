@@ -1,175 +1,175 @@
 {
   "semantics": [
     {
-      "label": "Show title slide"
+      "label": "Afficher la diapositive de titre"
     },
     {
-      "label": "Title slide",
+      "label": "Diapositive du titre",
       "fields": [
         {
-          "label": "Slide type",
-          "default": "title"
+          "label": "Type de diapositive",
+          "default": "titre"
         },
         {
-          "label": "Title"
+          "label": "Titre"
         },
         {
-          "label": "Start date",
-          "description": "YYYY-MM-DD — only year is required. Years can be negative."
+          "label": "Date de début",
+          "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
         },
         {
-          "label": "End date",
-          "description": "YYYY-MM-DD — only year is required. Years can be negative."
+          "label": "Date de fin",
+          "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
         },
         {
           "label": "Description"
         },
         {
-          "label": "Layout",
+          "label": "Mise en page",
           "options": [
             {
-              "label": "Text on right (standard)"
+              "label": "Texte à droite (standard)"
             },
             {
-              "label": "Text on left"
+              "label": "Texte à gauche"
             }
           ]
         },
         {
-          "label": "Media type",
+          "label": "Type de média",
           "options": [
             {
               "label": "Image"
             },
             {
-              "label": "Video"
+              "label": "Vidéo"
             },
             {
               "label": "Audio"
             },
             {
-              "label": "External link"
+              "label": "Lien externe"
             },
             {
-              "label": "None"
+              "label": "Aucun"
             }
           ]
         },
         {
-          "label": "Image"
+          "label": "Image d'arrière-plan"
         },
         {
-          "label": "Alternative text",
-          "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+          "label": "Texte alternatif",
+          "description": "Requis. Si le navigateur ne peut pas charger l&#39;image, ce texte sera affiché à la place. Également utilisé par les lecteurs &quot;text-to-speech&quot;."
         },
         {
-          "label": "Video"
+          "label": "Vidéo"
         },
         {
           "label": "Audio"
         },
         {
-          "label": "External link",
-          "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          "label": "Lien externe",
+          "description": "Insérer un lien vers des ressources externes. Certains sites Web seront rendus sous forme d&#39;intégrations spécialisées, telles que Twitter, YouTube, Wikipedia et Google Maps. Voir la liste complète dans la <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Documentation Knightlab</a>"
         },
         {
           "label": "Information",
           "fields": [
             {
-              "label": "Credit",
-              "description": "Credits to the media"
+              "label": "Crédits",
+              "description": "Crédits pour les médias"
             },
             {
-              "label": "Caption",
-              "description": "Caption text"
+              "label": "Légende",
+              "description": "Texte de la légende"
             }
           ]
         },
         {
-          "label": "Appearance",
+          "label": "Apparence",
           "fields": [
             {
-              "label": "Background",
+              "label": "Arrière-plan",
               "options": [
                 {
-                  "label": "Color"
+                  "label": "Couleur"
                 },
                 {
                   "label": "Image"
                 },
                 {
-                  "label": "None"
+                  "label": "Aucun"
                 }
               ]
             },
             {
-              "label": "Background color",
+              "label": "Couleur d'arrière-plan",
               "default": "#757575"
             },
             {
-              "label": "Background image"
+              "label": "Image d'arrière-plan'"
             }
           ]
         }
       ]
     },
     {
-      "label": "Timeline items",
-      "entity": "Timeline item",
+      "label": "Éléments de la chronologie",
+      "entity": "Élément de chronologie",
       "widgets": [
         {
-          "label": "Default"
+          "label": "Par défaut"
         }
       ],
       "field": {
         "label": "Item",
         "fields": [
           {
-            "label": "Slide type",
-            "default": "regular"
+            "label": "Type de diapositive",
+            "default": "régulier"
           },
           {
-            "label": "Title"
+            "label": "Titre"
           },
           {
-            "label": "Start date",
-            "description": "YYYY-MM-DD — only year is required. Years can be negative."
+            "label": "Date de début",
+            "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
           },
           {
-            "label": "End date",
-            "description": "YYYY-MM-DD — only year is required. Years can be negative."
+            "label": "Date de fin",
+            "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
           },
           {
             "label": "Description"
           },
           {
-            "label": "Layout",
+            "label": "Mise en page",
             "options": [
               {
-                "label": "Text on right (standard)"
+                "label": "Texte à droite (standard)"
               },
               {
-                "label": "Text on left"
+                "label": "Texte à gauche"
               }
             ]
           },
           {
-            "label": "Media type",
+            "label": "Type de média",
             "options": [
               {
                 "label": "Image"
               },
               {
-                "label": "Video"
+                "label": "Vidéo"
               },
               {
                 "label": "Audio"
               },
               {
-                "label": "External link"
+                "label": "Lien externe"
               },
               {
-                "label": "None"
+                "label": "Aucun"
               }
             ]
           },
@@ -177,76 +177,76 @@
             "label": "Image"
           },
           {
-            "label": "Alternative text",
-            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+            "label": "Texte alternatif",
+            "description": "Requis. Si le navigateur ne peut pas charger l&#39;image, ce texte sera affiché à la place. Également utilisé par les lecteurs &quot;text-to-speech&quot;."
           },
           {
-            "label": "Video"
+            "label": "Vidéo"
           },
           {
             "label": "Audio"
           },
           {
-            "label": "External link",
-            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+            "label": "Lien externe",
+            "description": "Insérer un lien vers des ressources externes. Certains sites Web seront rendus sous forme d&#39;intégrations spécialisées, telles que Twitter, YouTube, Wikipedia et Google Maps. Voir la liste complète dans la <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Documentation Knightlab</a>"
           },
           {
             "label": "Information",
             "fields": [
               {
-                "label": "Credit",
-                "description": "Credits to the media"
+                "label": "Crédits",
+                "description": "Crédits pour les médias"
               },
               {
-                "label": "Caption",
-                "description": "Caption text"
+                "label": "Légende",
+                "description": "Texte de la légende"
               }
             ]
           },
           {
-            "label": "Tags",
-            "entity": "Tag",
+            "label": "Étiquettes",
+            "entity": "Étiquette",
             "field": {
-              "label": "Tag",
+              "label": "Étiquette",
               "fields": [
                 {
                   "label": "Id"
                 },
                 {
-                  "label": "Name"
+                  "label": "Nom"
                 },
                 {
-                  "label": "Color"
+                  "label": "Couleur"
                 },
                 {
-                  "label": "Is active"
+                  "label": "Est actif"
                 }
               ]
             }
           },
           {
-            "label": "Appearance",
+            "label": "Apparence",
             "fields": [
               {
-                "label": "Background",
+                "label": "Arrière-plan",
                 "options": [
                   {
-                    "label": "Color"
+                    "label": "Couleur"
                   },
                   {
                     "label": "Image"
                   },
                   {
-                    "label": "None"
+                    "label": "Aucun"
                   }
                 ]
               },
               {
-                "label": "Background color",
+                "label": "Couleur de fond",
                 "default": "#757575"
               },
               {
-                "label": "Background image"
+                "label": "Image d'arrière-plan'"
               }
             ]
           }
@@ -254,22 +254,23 @@
       }
     },
     {
-      "label": "Tags",
+      "label": "Étiquettes",
       "fields": [
         {
-          "label": "Tags",
-          "entity": "Tag",
+          "label": "Étiquettes",
+          "entity": "Étiquette",
           "field": {
-            "label": "Tag",
+            "label": "Étiquette",
             "fields": [
               {
                 "label": "Id"
               },
               {
-                "label": "Name"
+                "label": "Nom"
               },
               {
-                "label": "Color"
+                "label": "Couleur",
+                "default": "#E0E0E0"
               }
             ]
           }
@@ -277,24 +278,24 @@
       ]
     },
     {
-      "label": "Eras",
+      "label": "Périodes",
       "fields": [
         {
-          "label": "Eras",
-          "entity": "Era",
+          "label": "Périodes",
+          "entity": "Période",
           "field": {
-            "label": "Era",
+            "label": "Période",
             "fields": [
               {
-                "label": "Name"
+                "label": "Nom"
               },
               {
-                "label": "Start date",
-                "description": "YYYY-MM-DD — only year is required. Years can be negative."
+                "label": "Date de début",
+                "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
               },
               {
-                "label": "End date",
-                "description": "YYYY-MM-DD — only year is required. Years can be negative."
+                "label": "Date de fin",
+                "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
               }
             ]
           }
@@ -302,29 +303,29 @@
       ]
     },
     {
-      "label": "Behavioral settings",
+      "label": "Options générales",
       "fields": [
         {
-          "label": "unused"
+          "label": "inutilisé"
         },
         {
-          "label": "Scaling mode",
-          "description": "Choose between scaling modes. \"Human time\" shows date in years before and after the Common Era using regular notation, while \"Cosmological time\" shows dates using scientific notation. \"Indexed\" is useful when you want to skew timeframes and make all events seem equally far apart.",
+          "label": "Mode de mise à l&#39;échelle",
+          "description": "Choisissez entre les modes de mise à l&#39;échelle. &quot;Le temps humain&quot; montre la date en années avant et après l&#39;ère commune en utilisant la notation régulière, tandis que le &quot;temps cosmologique&quot; montre les dates en utilisant la notation scientifique. &quot;Indexé&quot; est utile lorsque vous souhaitez biaiser les intervalles et faire en sorte que tous les événements semblent également éloignés les uns des autres.",
           "options": [
             {
-              "label": "Human time"
+              "label": "Temps humain"
             },
             {
-              "label": "Cosmological time"
+              "label": "Temps cosmologique"
             },
             {
-              "label": "Indexed"
+              "label": "Indexé"
             }
           ]
         },
         {
-          "label": "Initial Zoom",
-          "description": "This will tweak the initial zoom level (2). Equivalent to pressing the zoom in or zoom out button the specified number of times. Values 0 and 1 will zoom out; values 3 to 10 will zoom in."
+          "label": "Zoom initial",
+          "description": "Cela permet de modifier le niveau de zoom initial (2). Cela équivaut à appuyer sur le bouton 'zoom avant' ou 'zoom arrière' le nombre de fois spécifié. Les valeurs 0 et 1 permettent d'effectuer un zoom arrière ; les valeurs 3 à 10 permettent d'effectuer un zoom avant."
         }
       ]
     },
