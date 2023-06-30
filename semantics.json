@@ -388,8 +388,8 @@
           }
         },
         {
-          "label": "Text Or Media?",
-          "name": "TextOrMedia",
+          "label": "Text Or Image?",
+          "name": "TextOrImage",
           "type": "select",
           "default": "text",
           "options": [
@@ -398,8 +398,8 @@
               "value": "text"
             },
             {
-              "label": "Media",
-              "value": "media"
+              "label": "Image",
+              "value": "image"
             }
           ]
         },
@@ -414,45 +414,8 @@
           "showWhen": {
             "rules": [
               {
-                "field": "TextOrMedia",
+                "field": "TextOrImage",
                 "equals": "text"
-              }
-            ]
-          }
-        },
-        {
-          "label": "Description Media type",
-          "name": "descriptionMediaType",
-          "type": "select",
-          "options": [
-            {
-              "label": "Image",
-              "value": "image"
-            },
-            {
-              "label": "Video",
-              "value": "video"
-            },
-            {
-              "label": "Audio",
-              "value": "audio"
-            },
-            {
-              "label": "External link",
-              "value": "custom"
-            },
-            {
-              "label": "None",
-              "value": "none"
-            }
-          ],
-          "default": "none",
-          "widget": "showWhen",
-          "showWhen": {
-            "rules": [
-              {
-                "field": "TextOrMedia",
-                "equals": "media"
               }
             ]
           }
@@ -463,14 +426,24 @@
           "type": "image",
           "widget": "showWhen",
           "showWhen": {
-            "type": "and",
             "rules": [
               {
-                "field": "TextOrMedia",
-                "equals": "media"
-              },
+                "field": "TextOrImage",
+                "equals": "image"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Alternative text",
+          "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers.",
+          "name": "descriptionImageAlt",
+          "type": "text",
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
               {
-                "field": "descriptionMediaType",
+                "field": "TextOrImage",
                 "equals": "image"
               }
             ]

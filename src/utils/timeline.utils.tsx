@@ -15,7 +15,6 @@ import { EventItemType } from '../types/EventItemType';
 import { Params } from '../types/Params';
 import { SlideType } from '../types/SlideType';
 import { isDefined } from './is-defined.utils';
-import { updatePaths } from '../H5P/H5P.util';
 import { H5PContentId } from 'h5p-types';
 
 const html = String.raw;
@@ -87,7 +86,6 @@ const getMedia = (
   eventItem: EventItemType<SlideType>,
 ): string | H5PMedia | undefined => {
   let media;
-
   switch (eventItem.mediaType) {
     case 'image':
       media = eventItem.image;
@@ -112,37 +110,6 @@ const getMedia = (
 
   return media;
 };
-
-const getDescriptionMedia = (
-  eventItem: EventItemType<SlideType>,
-): string | H5PMedia | undefined => {
-  let media;
-
-  switch (eventItem.mediaType) {
-    case 'image':
-      media = eventItem.image;
-      break;
-
-    case 'video':
-      media = eventItem.video?.[0];
-      break;
-
-    case 'audio':
-      media = eventItem.audio?.[0];
-      break;
-
-    case 'custom':
-      media = eventItem.customMedia;
-      break;
-
-    case 'none':
-      media = undefined;
-      break;
-  }
-
-  return media;
-};
-
 
 const isDateOrderOK = (
   startDate: TimelineDate | null,
@@ -190,22 +157,17 @@ export const mapEventToTimelineSlide = (
       );
     }
     text = tagsMarkup;
-//console.log('event = ' + event);
-console.log('event = ' + JSON.stringify(event, undefined, 4));
-//private contentId: H5PContentId;
-//console.log(params);
 
-    if (event.description && !event.descriptionImage) {
+    if (event.description && event.TextOrImage === 'text') {
       text += html`<div class="h5p-tl-slide-description">
         ${event.description.params.text ?? ''}
       </div>`;
     }
-    else if (event.descriptionImage) {
-    const descriptionMedia = getDescriptionMedia(event);
-    console.log('**** descriptionMedia = ' + JSON.stringify(descriptionMedia, undefined, 4));
-    text += html`<img alt="" src="https://www.rezeau.org/wp-garden/wp-content/uploads/I-IMGP3463.jpg" />
+    else if (event.descriptionImage && event.TextOrImage === 'image') {
+    text += html`<img alt="" src="`+ event.descriptionImage.path +`" />
       </div>`;
     }
+    
   }
 
   // The `layout-x` part of this ID is used for styling and must not be removed
@@ -233,7 +195,6 @@ console.log('event = ' + JSON.stringify(event, undefined, 4));
 
   const media = getMedia(event);
   if (media) {
-  console.log('media = ' + media);
     slide.media = {
       url: typeof media === 'string' ? media : media.path,
       alt: event.mediaType === 'image' ? event.imageAlt : undefined,

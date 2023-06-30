@@ -26,7 +26,6 @@ export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<P
 
     this.params = params;
     this.contentId = contentId;
-    console.log('this.contentId = ' + this.contentId);
     this.extras = extras;
   }
 
