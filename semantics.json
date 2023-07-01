@@ -46,10 +46,28 @@
       {
         "label": "Description",
         "name": "description",
-        "type": "library",
-        "options": [
-          "H5P.Text 1.1"
-        ]
+        "type": "text",
+        "widget": "html",
+        "tags": [
+          "strong",
+          "em",
+          "u",
+          "a",
+          "ul",
+          "ol",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "hr",
+          "table"
+        ],
+        "font": {
+          "size": true,
+          "family": true,
+          "color": true,
+          "background": true
+        }
       },
       {
         "label": "Layout",
@@ -406,18 +424,27 @@
         {
           "label": "Description",
           "name": "description",
-          "type": "library",
-          "options": [
-            "H5P.Text 1.1"
+          "type": "text",
+          "widget": "html",
+          "tags": [
+            "strong",
+            "em",
+            "u",
+            "a",
+            "ul",
+            "ol",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "hr",
+            "table"
           ],
-          "widget": "showWhen",
-          "showWhen": {
-            "rules": [
-              {
-                "field": "TextOrImage",
-                "equals": "text"
-              }
-            ]
+          "font": {
+            "size": true,
+            "family": true,
+            "color": true,
+            "background": true
           }
         },
         {

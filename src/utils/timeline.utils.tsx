@@ -160,14 +160,14 @@ export const mapEventToTimelineSlide = (
 
     if (event.description && event.TextOrImage === 'text') {
       text += html`<div class="h5p-tl-slide-description">
-        ${event.description.params.text ?? ''}
+        ${event.description ?? ''}
       </div>`;
     }
     else if (event.descriptionImage && event.TextOrImage === 'image') {
-    text += html`<img alt="" src="`+ event.descriptionImage.path +`" />
+      text += html`<img alt="" src="` + event.descriptionImage.path + `" />
       </div>`;
     }
-    
+
   }
 
   // The `layout-x` part of this ID is used for styling and must not be removed
