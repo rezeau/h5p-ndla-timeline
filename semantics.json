@@ -93,7 +93,7 @@
             "value": "none"
           }
         ],
-        "default": "image"
+        "default": "none"
       },
       {
         "label": "Image",
@@ -388,12 +388,66 @@
           }
         },
         {
+          "label": "Text Or Image?",
+          "name": "TextOrImage",
+          "type": "select",
+          "default": "text",
+          "options": [
+            {
+              "label": "Text",
+              "value": "text"
+            },
+            {
+              "label": "Image",
+              "value": "image"
+            }
+          ]
+        },
+        {
           "label": "Description",
           "name": "description",
           "type": "library",
           "options": [
             "H5P.Text 1.1"
-          ]
+          ],
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "TextOrImage",
+                "equals": "text"
+              }
+            ]
+          }
+        },
+        {
+          "label": "description Image",
+          "name": "descriptionImage",
+          "type": "image",
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "TextOrImage",
+                "equals": "image"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Alternative text",
+          "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers.",
+          "name": "descriptionImageAlt",
+          "type": "text",
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "TextOrImage",
+                "equals": "image"
+              }
+            ]
+          }
         },
         {
           "label": "Layout",
@@ -437,7 +491,7 @@
               "value": "none"
             }
           ],
-          "default": "image"
+          "default": "none"
         },
         {
           "label": "Image",

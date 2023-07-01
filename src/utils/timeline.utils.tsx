@@ -15,6 +15,7 @@ import { EventItemType } from '../types/EventItemType';
 import { Params } from '../types/Params';
 import { SlideType } from '../types/SlideType';
 import { isDefined } from './is-defined.utils';
+import { H5PContentId } from 'h5p-types';
 
 const html = String.raw;
 
@@ -69,6 +70,7 @@ const isDateValid = (dateString: DateString): boolean => {
 };
 
 export const parseDate = (dateString: string): TimelineDate | null => {
+
   if (!isDateString(dateString)) {
     return null;
   }
@@ -84,7 +86,6 @@ const getMedia = (
   eventItem: EventItemType<SlideType>,
 ): string | H5PMedia | undefined => {
   let media;
-
   switch (eventItem.mediaType) {
     case 'image':
       media = eventItem.image;
@@ -157,11 +158,16 @@ export const mapEventToTimelineSlide = (
     }
     text = tagsMarkup;
 
-    if (event.description) {
+    if (event.description && event.TextOrImage === 'text') {
       text += html`<div class="h5p-tl-slide-description">
         ${event.description.params.text ?? ''}
       </div>`;
     }
+    else if (event.descriptionImage && event.TextOrImage === 'image') {
+    text += html`<img alt="" src="`+ event.descriptionImage.path +`" />
+      </div>`;
+    }
+    
   }
 
   // The `layout-x` part of this ID is used for styling and must not be removed
