@@ -48,7 +48,7 @@
         "name": "description",
         "type": "library",
         "options": [
-          "H5P.Text 1.1"
+          "H5P.AdvancedTextPapiJo 1.1"
         ]
       },
       {
@@ -414,10 +414,10 @@
           "showWhen": {
             "rules": [
               {
-                "field": "TextOrImage",
-                "equals": "text"
-              }
-            ]
+              "field": "TextOrImage",
+              "equals": "text"
+            }
+          ]
           }
         },
         {
