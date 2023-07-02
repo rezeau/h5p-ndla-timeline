@@ -158,13 +158,13 @@ export const mapEventToTimelineSlide = (
     }
     text = tagsMarkup;
 
-    if (event.description && event.TextOrImage === 'text') {
+    if (event.description && event.TextOrImage !== 'image') {
       text += html`<div class="h5p-tl-slide-description">
         ${event.description.params.text ?? ''}
       </div>`;
     }
     else if (event.descriptionImage && event.TextOrImage === 'image') {
-    text += html`<img alt="" src="`+ event.descriptionImage.path +`" />
+      text += html`<img alt="" src="` + event.descriptionImage.path + `" />
       </div>`;
     }
     
@@ -174,17 +174,16 @@ export const mapEventToTimelineSlide = (
   // before we find another way to change slide layouts
   // Work around h5p-types that fails jest test when importing H5P
   const id = `${(window as any).H5P.createUUID()}_layout-${event.layout}`;
-
+  const endDate = event.endDate ? parseDate(event.endDate) : null;
   const slide: TimelineSlide = {
     unique_id: id,
     start_date: startDate ?? undefined,
+    end_date: endDate ?? undefined,
     text: {
       headline: event.title,
       text,
     },
   };
-
-  const endDate = event.endDate ? parseDate(event.endDate) : null;
 
   if (!isDateOrderOK(startDate, endDate)) {
     // Do something to alert end-user of dates mismatch.

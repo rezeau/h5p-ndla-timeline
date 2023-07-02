@@ -167,5 +167,11 @@
   .tl-caption {
     margin-top: 5px;
   }
-
+  .tl-slide .tl-slide-content-container .tl-slide-content .tl-media {
+    width: 50%;
+  }
+  .tl-timeline h1, .tl-timeline h2, .tl-timeline h3, .tl-timeline h4, .tl-timeline h5, .tl-timeline h6 {
+    font-size: revert;
+  }
+  
 }

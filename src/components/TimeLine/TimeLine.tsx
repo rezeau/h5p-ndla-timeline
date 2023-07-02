@@ -41,10 +41,10 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     [data, timelineTitle],
   );
   if (!data.behaviour) {
-    throw new Error("Unexpected error: Missing name");
+    throw new Error('Unexpected error: Missing name');
   }
   // See https://stackoverflow.com/questions/54496398/typescript-type-string-undefined-is-not-assignable-to-type-string
-  let zoom = (!data.behaviour.initialZoom ? "2" : data.behaviour.initialZoom as string);
+  let zoom = (!data.behaviour.initialZoom ? '2' : data.behaviour.initialZoom as string);
   zoom = zoom.toString();
   const [height, setHeight] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
