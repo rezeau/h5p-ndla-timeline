@@ -968,6 +968,23 @@
         "default": 2,
         "description": "This will tweak the initial zoom level (2). Equivalent to pressing the zoom in or zoom out button the specified number of times. Values 0 and 1 will zoom out; values 3 to 10 will zoom in.",
         "optional": true
+      },
+      {
+        "label": "Timeline Position",
+        "name": "timenavPosition",
+        "description": "Select the position of the Timeline navigation.",
+        "type": "select",
+        "default": "bottom",
+        "options": [
+          {
+            "label": "bottom",
+            "value": "bottom"
+          },
+          {
+            "label": "top",
+            "value": "top"
+          }
+        ]
       }
     ]
   },

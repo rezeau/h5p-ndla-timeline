@@ -5,6 +5,7 @@ export type Params = TimelineData & {
   behaviour?: {
     scalingMode: 'human' | 'cosmological' | 'index';
     initialZoom?: string | undefined;
+    timenavPosition?: string | undefined;
   };
 
   l10n?: Translations;
