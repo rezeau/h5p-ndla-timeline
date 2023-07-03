@@ -47,7 +47,6 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   let zoom = (!data.behaviour.initialZoom ? '2' : data.behaviour.initialZoom as string);
   zoom = zoom.toString();
   let timenavPosition =  (!data.behaviour.timenavPosition ? '2' : data.behaviour.timenavPosition as string);
-  //zoom = zoom.toString();
   const [height, setHeight] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
   const [slideHeight, setSlideHeight] = useState(0);
