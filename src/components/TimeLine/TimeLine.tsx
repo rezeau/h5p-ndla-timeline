@@ -104,6 +104,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       language: language,
       initial_zoom: zoom,
       timenav_position: timenavPosition,
+      font: undefined,
     });
 
     const timelineContainer = containerRef.current?.querySelector(
