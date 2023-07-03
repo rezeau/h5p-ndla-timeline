@@ -46,6 +46,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   // See https://stackoverflow.com/questions/54496398/typescript-type-string-undefined-is-not-assignable-to-type-string
   let zoom = (!data.behaviour.initialZoom ? '2' : data.behaviour.initialZoom as string);
   zoom = zoom.toString();
+  let timenavPosition =  (!data.behaviour.timenavPosition ? '2' : data.behaviour.timenavPosition as string);
   const [height, setHeight] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
   const [slideHeight, setSlideHeight] = useState(0);
@@ -102,6 +103,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     const timeline = new Timeline(containerId, timelineDefinition, {
       language: language,
       initial_zoom: zoom,
+      timenav_position: timenavPosition,
     });
 
     const timelineContainer = containerRef.current?.querySelector(
