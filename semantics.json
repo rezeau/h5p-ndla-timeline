@@ -970,7 +970,7 @@
         "optional": true
       },
       {
-        "label": "Timeline Position",
+        "label": "Timeline navigation position",
         "name": "timenavPosition",
         "description": "Select the position of the Timeline navigation.",
         "type": "select",
