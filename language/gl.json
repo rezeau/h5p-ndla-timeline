@@ -77,24 +77,40 @@
           "fields": [
             {
               "label": "Fondo",
+              "description": "Credits to the media"
+            },
+            {
+              "label": "Cor de fondo",
+              "description": "Caption text"
+            },
+            {
+              "label": "Imaxe de fondo"
+            }
+          ]
+        },
+        {
+          "label": "Appearance",
+          "fields": [
+            {
+              "label": "Background",
               "options": [
                 {
-                  "label": "Cor"
+                  "label": "Color"
                 },
                 {
-                  "label": "Imaxe"
+                  "label": "Image"
                 },
                 {
-                  "label": "Ningún"
+                  "label": "None"
                 }
               ]
             },
             {
-              "label": "Cor de fondo",
+              "label": "Background color",
               "default": "#757575"
             },
             {
-              "label": "Imaxe de fondo"
+              "label": "Background image"
             }
           ]
         }
@@ -127,48 +143,56 @@
             "description": "AAAA-MM-DD: só é necesario o ano. Os anos poden ser negativos."
           },
           {
-            "label": "Descrición"
-          },
-          {
-            "label": "Deseño",
+            "label": "Descrición",
             "options": [
               {
-                "label": "Texto á dereita (estándar)"
+                "label": "Text"
               },
               {
-                "label": "Texto á esquerda"
+                "label": "Image"
               }
             ]
           },
           {
-            "label": "Tipo de medio",
-            "options": [
-              {
-                "label": "Imaxe"
-              },
-              {
-                "label": "Vídeo"
-              },
-              {
-                "label": "Son"
-              },
-              {
-                "label": "Ligazón externa"
-              },
-              {
-                "label": "Ningún"
-              }
-            ]
+            "label": "Deseño"
           },
           {
-            "label": "Imaxe"
+            "label": "Tipo de medio"
+          },
+          {
+            "label": "Imaxe",
+            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
           },
           {
             "label": "Texto alternativo",
-            "description": "Requirido. Se o navegador non pode cargar a imaxe, amosarase este texto no seu lugar. Úsase tamén para os lectores de pantalla."
+            "options": [
+              {
+                "label": "Text on right (standard)"
+              },
+              {
+                "label": "Text on left"
+              }
+            ]
           },
           {
-            "label": "Vídeo"
+            "label": "Vídeo",
+            "options": [
+              {
+                "label": "Image"
+              },
+              {
+                "label": "Video"
+              },
+              {
+                "label": "Audio"
+              },
+              {
+                "label": "External link"
+              },
+              {
+                "label": "None"
+              }
+            ]
           },
           {
             "label": "Son"
@@ -178,49 +202,72 @@
             "description": "Insire unha ligazón a recursos externos. Algúns sitios web amosaranse como insercións especializadas, como Twitter, YouTube, Wikipedia e Google Maps. Consulta a lista completa nos documentos de <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab</a>"
           },
           {
-            "label": "Etiquetas",
-            "entity": "Etiqueta",
+            "label": "Etiquetas"
+          },
+          {
+            "label": "Aparencia"
+          },
+          {
+            "label": "External link",
+            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          },
+          {
+            "label": "Information",
+            "fields": [
+              {
+                "label": "Credit",
+                "description": "Credits to the media"
+              },
+              {
+                "label": "Caption",
+                "description": "Caption text"
+              }
+            ]
+          },
+          {
+            "label": "Tags",
+            "entity": "Tag",
             "field": {
-              "label": "Etiqueta",
+              "label": "Tag",
               "fields": [
                 {
                   "label": "Id"
                 },
                 {
-                  "label": "Nome"
+                  "label": "Name"
                 },
                 {
-                  "label": "Cor"
+                  "label": "Color"
                 },
                 {
-                  "label": "Está activo"
+                  "label": "Is active"
                 }
               ]
             }
           },
           {
-            "label": "Aparencia",
+            "label": "Appearance",
             "fields": [
               {
-                "label": "Fondo",
+                "label": "Background",
                 "options": [
                   {
-                    "label": "Cor"
+                    "label": "Color"
                   },
                   {
-                    "label": "Imaxe"
+                    "label": "Image"
                   },
                   {
-                    "label": "Ningún"
+                    "label": "None"
                   }
                 ]
               },
               {
-                "label": "Cor de fondo",
+                "label": "Background color",
                 "default": "#757575"
               },
               {
-                "label": "Imaxe de fondo"
+                "label": "Background image"
               }
             ]
           }
@@ -300,176 +347,188 @@
         {
           "label": "Initial Zoom",
           "description": "This will tweak the initial zoom level (2). Equivalent to pressing the zoom in or zoom out button the specified number of times. Values 0 and 1 will zoom out; values 3 to 10 will zoom in."
-        }
-      ]
-    },
+        },
         {
-          "label": "Idioma",
-          "description": "O idioma da interface de usuario",
+          "label": "Timeline navigation position",
+          "description": "Select the position of the Timeline navigation.",
           "options": [
             {
-              "label": "Afrikaans"
+              "label": "bottom"
             },
             {
-              "label": "Árabe"
-            },
-            {
-              "label": "Armenio"
-            },
-            {
-              "label": "Vasco"
-            },
-            {
-              "label": "Búlgaro"
-            },
-            {
-              "label": "Catalán"
-            },
-            {
-              "label": "Chines"
-            },
-            {
-              "label": "Croata / Hrvatski"
-            },
-            {
-              "label": "Checo"
-            },
-            {
-              "label": "Danés"
-            },
-            {
-              "label": "Holandés"
-            },
-            {
-              "label": "Inglés"
-            },
-            {
-              "label": "Inglés (formato 24 horas)"
-            },
-            {
-              "label": "Esperanto"
-            },
-            {
-              "label": "Estonio"
-            },
-            {
-              "label": "Faroes"
-            },
-            {
-              "label": "Farsi"
-            },
-            {
-              "label": "Finlandés"
-            },
-            {
-              "label": "Francés"
-            },
-            {
-              "label": "Galego"
-            },
-            {
-              "label": "Georgiano"
-            },
-            {
-              "label": "Alemán / Deutsch"
-            },
-            {
-              "label": "Grego"
-            },
-            {
-              "label": "Hebreo"
-            },
-            {
-              "label": "Húngaro"
-            },
-            {
-              "label": "Islandés"
-            },
-            {
-              "label": "Indonesio"
-            },
-            {
-              "label": "Italiano"
-            },
-            {
-              "label": "Xaponés"
-            },
-            {
-              "label": "Koreano"
-            },
-            {
-              "label": "Latvio"
-            },
-            {
-              "label": "Lituano"
-            },
-            {
-              "label": "Luxemburgués"
-            },
-            {
-              "label": "Malaio"
-            },
-            {
-              "label": "Nepalés"
-            },
-            {
-              "label": "Noruego"
-            },
-            {
-              "label": "Polaco"
-            },
-            {
-              "label": "Portugués"
-            },
-            {
-              "label": "Portugués (Brasileiro)"
-            },
-            {
-              "label": "Romanés"
-            },
-            {
-              "label": "Ruso"
-            },
-            {
-              "label": "Serbio - Cirílico"
-            },
-            {
-              "label": "Serbio - Latín"
-            },
-            {
-              "label": "Cingalés"
-            },
-            {
-              "label": "Eslovaco"
-            },
-            {
-              "label": "Sloveno"
-            },
-            {
-              "label": "Español"
-            },
-            {
-              "label": "Sueco"
-            },
-            {
-              "label": "Tagalo"
-            },
-            {
-              "label": "Tamil"
-            },
-            {
-              "label": "Taiwanes"
-            },
-            {
-              "label": "Telugu"
-            },
-            {
-              "label": "Turco"
-            },
-            {
-              "label": "Ukraniano"
+              "label": "top"
             }
           ]
         }
+      ]
+    },
+    {
+      "label": "Idioma",
+      "description": "O idioma da interface de usuario",
+      "options": [
+        {
+          "label": "Afrikaans"
+        },
+        {
+          "label": "Árabe"
+        },
+        {
+          "label": "Armenio"
+        },
+        {
+          "label": "Vasco"
+        },
+        {
+          "label": "Búlgaro"
+        },
+        {
+          "label": "Catalán"
+        },
+        {
+          "label": "Chines"
+        },
+        {
+          "label": "Croata / Hrvatski"
+        },
+        {
+          "label": "Checo"
+        },
+        {
+          "label": "Danés"
+        },
+        {
+          "label": "Holandés"
+        },
+        {
+          "label": "Inglés"
+        },
+        {
+          "label": "Inglés (formato 24 horas)"
+        },
+        {
+          "label": "Esperanto"
+        },
+        {
+          "label": "Estonio"
+        },
+        {
+          "label": "Faroes"
+        },
+        {
+          "label": "Farsi"
+        },
+        {
+          "label": "Finlandés"
+        },
+        {
+          "label": "Francés"
+        },
+        {
+          "label": "Galego"
+        },
+        {
+          "label": "Georgiano"
+        },
+        {
+          "label": "Alemán / Deutsch"
+        },
+        {
+          "label": "Grego"
+        },
+        {
+          "label": "Hebreo"
+        },
+        {
+          "label": "Húngaro"
+        },
+        {
+          "label": "Islandés"
+        },
+        {
+          "label": "Indonesio"
+        },
+        {
+          "label": "Italiano"
+        },
+        {
+          "label": "Xaponés"
+        },
+        {
+          "label": "Koreano"
+        },
+        {
+          "label": "Latvio"
+        },
+        {
+          "label": "Lituano"
+        },
+        {
+          "label": "Luxemburgués"
+        },
+        {
+          "label": "Malaio"
+        },
+        {
+          "label": "Nepalés"
+        },
+        {
+          "label": "Noruego"
+        },
+        {
+          "label": "Polaco"
+        },
+        {
+          "label": "Portugués"
+        },
+        {
+          "label": "Portugués (Brasileiro)"
+        },
+        {
+          "label": "Romanés"
+        },
+        {
+          "label": "Ruso"
+        },
+        {
+          "label": "Serbio - Cirílico"
+        },
+        {
+          "label": "Serbio - Latín"
+        },
+        {
+          "label": "Cingalés"
+        },
+        {
+          "label": "Eslovaco"
+        },
+        {
+          "label": "Sloveno"
+        },
+        {
+          "label": "Español"
+        },
+        {
+          "label": "Sueco"
+        },
+        {
+          "label": "Tagalo"
+        },
+        {
+          "label": "Tamil"
+        },
+        {
+          "label": "Taiwanes"
+        },
+        {
+          "label": "Telugu"
+        },
+        {
+          "label": "Turco"
+        },
+        {
+          "label": "Ukraniano"
+        }
+      ]
+    }
   ]
 }

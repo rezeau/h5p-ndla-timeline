@@ -77,24 +77,40 @@
           "fields": [
             {
               "label": "Hintergrund",
+              "description": "Credits to the media"
+            },
+            {
+              "label": "Hintergrundfarbe",
+              "description": "Caption text"
+            },
+            {
+              "label": "Hintergrundbild"
+            }
+          ]
+        },
+        {
+          "label": "Appearance",
+          "fields": [
+            {
+              "label": "Background",
               "options": [
                 {
-                  "label": "Farbe"
+                  "label": "Color"
                 },
                 {
-                  "label": "Bild"
+                  "label": "Image"
                 },
                 {
-                  "label": "Nichts"
+                  "label": "None"
                 }
               ]
             },
             {
-              "label": "Hintergrundfarbe",
+              "label": "Background color",
               "default": "#757575"
             },
             {
-              "label": "Hintergrundbild"
+              "label": "Background image"
             }
           ]
         }
@@ -127,10 +143,28 @@
             "description": "YYYY-MM-DD — only year is required. Years can be negative."
           },
           {
-            "label": "Description"
+            "label": "Description",
+            "options": [
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Image"
+              }
+            ]
           },
           {
-            "label": "Layout",
+            "label": "Layout"
+          },
+          {
+            "label": "Media type"
+          },
+          {
+            "label": "Image",
+            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+          },
+          {
+            "label": "Alternative text",
             "options": [
               {
                 "label": "Text on right (standard)"
@@ -141,7 +175,7 @@
             ]
           },
           {
-            "label": "Media type",
+            "label": "Video",
             "options": [
               {
                 "label": "Image"
@@ -161,21 +195,34 @@
             ]
           },
           {
-            "label": "Image"
-          },
-          {
-            "label": "Alternative text",
-            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
-          },
-          {
-            "label": "Video"
-          },
-          {
             "label": "Audio"
           },
           {
             "label": "External link",
             "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          },
+          {
+            "label": "Tags"
+          },
+          {
+            "label": "Appearance"
+          },
+          {
+            "label": "External link",
+            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          },
+          {
+            "label": "Information",
+            "fields": [
+              {
+                "label": "Credit",
+                "description": "Credits to the media"
+              },
+              {
+                "label": "Caption",
+                "description": "Caption text"
+              }
+            ]
           },
           {
             "label": "Tags",
@@ -300,6 +347,18 @@
         {
           "label": "Initial Zoom",
           "description": "This will tweak the initial zoom level (2). Equivalent to pressing the zoom in or zoom out button the specified number of times. Values 0 and 1 will zoom out; values 3 to 10 will zoom in."
+        },
+        {
+          "label": "Timeline navigation position",
+          "description": "Select the position of the Timeline navigation.",
+          "options": [
+            {
+              "label": "bottom"
+            },
+            {
+              "label": "top"
+            }
+          ]
         }
       ]
     },

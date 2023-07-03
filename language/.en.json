@@ -140,7 +140,25 @@
             "description": "YYYY-MM-DD — only year is required. Years can be negative."
           },
           {
+            "label": "Text Or Image?",
+            "options": [
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Image"
+              }
+            ]
+          },
+          {
             "label": "Description"
+          },
+          {
+            "label": "description Image"
+          },
+          {
+            "label": "Alternative text",
+            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
           },
           {
             "label": "Layout",
@@ -269,7 +287,8 @@
                 "label": "Name"
               },
               {
-                "label": "Color"
+                "label": "Color",
+                "default": "#E0E0E0"
               }
             ]
           }
@@ -325,6 +344,18 @@
         {
           "label": "Initial Zoom",
           "description": "This will tweak the initial zoom level (2). Equivalent to pressing the zoom in or zoom out button the specified number of times. Values 0 and 1 will zoom out; values 3 to 10 will zoom in."
+        },
+        {
+          "label": "Timeline navigation position",
+          "description": "Select the position of the Timeline navigation.",
+          "options": [
+            {
+              "label": "bottom"
+            },
+            {
+              "label": "top"
+            }
+          ]
         }
       ]
     },

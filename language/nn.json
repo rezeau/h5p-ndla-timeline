@@ -77,24 +77,40 @@
           "fields": [
             {
               "label": "Bakgrunn",
+              "description": "Credits to the media"
+            },
+            {
+              "label": "Bakgrunnsfarge",
+              "description": "Caption text"
+            },
+            {
+              "label": "Bakgrunnsbilete"
+            }
+          ]
+        },
+        {
+          "label": "Appearance",
+          "fields": [
+            {
+              "label": "Background",
               "options": [
                 {
-                  "label": "Farge"
+                  "label": "Color"
                 },
                 {
-                  "label": "Bilete"
+                  "label": "Image"
                 },
                 {
-                  "label": "Ingen"
+                  "label": "None"
                 }
               ]
             },
             {
-              "label": "Bakgrunnsfarge",
+              "label": "Background color",
               "default": "#757575"
             },
             {
-              "label": "Bakgrunnsbilete"
+              "label": "Background image"
             }
           ]
         }
@@ -127,48 +143,56 @@
             "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
           },
           {
-            "label": "Skildring"
-          },
-          {
-            "label": "Oppsett",
+            "label": "Skildring",
             "options": [
               {
-                "label": "Tekst på høgre side (standard)"
+                "label": "Text"
               },
               {
-                "label": "Tekst på venstre side"
+                "label": "Image"
               }
             ]
           },
           {
-            "label": "Mediatype",
+            "label": "Oppsett"
+          },
+          {
+            "label": "Mediatype"
+          },
+          {
+            "label": "Bilete",
+            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+          },
+          {
+            "label": "Alternativ tekst",
             "options": [
               {
-                "label": "Bilete"
+                "label": "Text on right (standard)"
+              },
+              {
+                "label": "Text on left"
+              }
+            ]
+          },
+          {
+            "label": "Video",
+            "options": [
+              {
+                "label": "Image"
               },
               {
                 "label": "Video"
               },
               {
-                "label": "Lyd"
+                "label": "Audio"
               },
               {
-                "label": "Ekstern lenkje"
+                "label": "External link"
               },
               {
-                "label": "Ingen"
+                "label": "None"
               }
             ]
-          },
-          {
-            "label": "Bilete"
-          },
-          {
-            "label": "Alternativ tekst",
-            "description": "Viss biletet ikkje kan lastast, blir denne teksten vist i istadenfor. Denne blir og nytta ved talesyntese."
-          },
-          {
-            "label": "Video"
           },
           {
             "label": "Lyd"
@@ -178,7 +202,30 @@
             "description": "Sett inn ei lenkje til eksterne ressursar. Visse nettsider vil få ein spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med fleire. Sjå heile lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
           },
           {
-            "label": "Tag-er",
+            "label": "Tag-er"
+          },
+          {
+            "label": "Utsjånad"
+          },
+          {
+            "label": "External link",
+            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          },
+          {
+            "label": "Information",
+            "fields": [
+              {
+                "label": "Credit",
+                "description": "Credits to the media"
+              },
+              {
+                "label": "Caption",
+                "description": "Caption text"
+              }
+            ]
+          },
+          {
+            "label": "Tags",
             "entity": "Tag",
             "field": {
               "label": "Tag",
@@ -187,40 +234,40 @@
                   "label": "Id"
                 },
                 {
-                  "label": "Namn"
+                  "label": "Name"
                 },
                 {
-                  "label": "Farge"
+                  "label": "Color"
                 },
                 {
-                  "label": "Er aktiv"
+                  "label": "Is active"
                 }
               ]
             }
           },
           {
-            "label": "Utsjånad",
+            "label": "Appearance",
             "fields": [
               {
-                "label": "Bakgrunn",
+                "label": "Background",
                 "options": [
                   {
-                    "label": "Farge"
+                    "label": "Color"
                   },
                   {
-                    "label": "Bilete"
+                    "label": "Image"
                   },
                   {
-                    "label": "Ingen"
+                    "label": "None"
                   }
                 ]
               },
               {
-                "label": "Bakgrunnsfarge",
+                "label": "Background color",
                 "default": "#757575"
               },
               {
-                "label": "Bakgrunnsbilete"
+                "label": "Background image"
               }
             ]
           }
@@ -300,6 +347,18 @@
         {
           "label": "Initial Zoom",
           "description": "This will tweak the initial zoom level (2). Equivalent to pressing the zoom in or zoom out button the specified number of times. Values 0 and 1 will zoom out; values 3 to 10 will zoom in."
+        },
+        {
+          "label": "Timeline navigation position",
+          "description": "Select the position of the Timeline navigation.",
+          "options": [
+            {
+              "label": "bottom"
+            },
+            {
+              "label": "top"
+            }
+          ]
         }
       ]
     },

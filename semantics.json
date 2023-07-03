@@ -414,10 +414,10 @@
           "showWhen": {
             "rules": [
               {
-              "field": "TextOrImage",
-              "equals": "text"
-            }
-          ]
+                "field": "TextOrImage",
+                "equals": "text"
+              }
+            ]
           }
         },
         {
