@@ -160,7 +160,7 @@ export const mapEventToTimelineSlide = (
 
     if (event.description && event.TextOrImage !== 'image') {
       text += html`<div class="h5p-tl-slide-description">
-        ${event.description ?? ''}
+        ${event.description.params.text ?? ''}
       </div>`;
     }
     else if (event.descriptionImage && event.TextOrImage === 'image') {
